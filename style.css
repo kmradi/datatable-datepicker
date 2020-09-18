@@ -34,7 +34,7 @@ tfoot input {
     font-size: 105%;
 }
 #divright{
-    width:50%;
+    width:55%;
     /* display: inline; */
     margin: 0 0 5% 0;
     border: 1px solid black;
@@ -42,7 +42,7 @@ tfoot input {
     float:right;
 }
 #divleft{
-    width:40%;
+    width:35%;
     font-size: 150%;
     float: left;
 }
