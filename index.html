@@ -8,19 +8,44 @@
     <link rel='stylesheet' href="//cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
     <link rel='stylesheet' href='style.css'>
     <script defer src='//cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js'></script>
-    <script defer src='script.js'></script>
+    
 
     <link href= 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/ui-lightness/jquery-ui.css'rel='stylesheet'> 
     <!-- <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" ></script>  -->
     <script defer src= "https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" ></script> 
-    <!-- <script type="text/javascript">
-        $(document).ready(function () {
-            $('#table1').dataTable();
-        });
-    </script> -->
+    <!--  -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.21/b-1.6.3/b-colvis-1.6.3/b-flash-1.6.3/b-html5-1.6.3/b-print-1.6.3/datatables.min.css"/>
+ 
+    <script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+    <script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+    <script defer type="text/javascript" src="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.21/b-1.6.3/b-colvis-1.6.3/b-flash-1.6.3/b-html5-1.6.3/b-print-1.6.3/datatables.min.js"></script>
+    <!--  -->
+    <script defer src='script.js'></script>
 </head>
 <body>
     <h1>Employee Attendance Manager</h1>
+    
+    <div id='divleft'>
+        To apply for leave
+            Enter the duration of the leave
+        <div id='divinfo'>
+            Note : <br>
+            1. Minimum value for starting date is today.<br>
+            2. Minimum value for ending date is start date.<br>
+            3. Leave greater than 7 days will not be accepted.<br>
+        </div>
+        <div id='divstart'>
+            Leave starts from:<br>
+            <input type="text" id="datepicker1" placeholder="click to enter date">
+        </div>
+        <div id='divend'>
+            Leave ends on:<br>
+            <input type="text" id="datepicker2" placeholder="click to enter date"> 
+        </div>
+        <button id='btn1' type="button">Submit request</button>
+        <div id='success'></div>
+        <div id='fail'></div>
+    </div>
     <div id='divright'>
         <table id="table1">
             <caption>Employee Leave Information</caption>
@@ -32,6 +57,14 @@
                     <th>Absent for (days)</th>
                 </tr>
             </thead>
+            <tfoot>
+                <tr>
+                    <th>ID number</th>
+                    <th>Name</th>
+                    <th>Leave taken </th>
+                    <th>Absent </th>
+                </tr>
+            </tfoot>
             <tbody>
                 <tr>
                     <td>143</td>
@@ -150,26 +183,5 @@
             </tbody>
             
         </table>
-    </div>
-    <div id='divleft'>
-        To apply for leave
-            Enter the duration of the leave
-        <div id='divinfo'>
-            Note : <br>
-            1. Minimum value for starting date is today.<br>
-            2. Minimum value for ending date is start date.<br>
-            3. Leave greater than 7 days will not be accepted.<br>
-        </div>
-        <div id='divstart'>
-            Leave starts from:<br>
-            <input type="text" id="datepicker1" placeholder="click to enter date">
-        </div>
-        <div id='divend'>
-            Leave ends on:<br>
-            <input type="text" id="datepicker2" placeholder="click to enter date"> 
-        </div>
-        <button id='btn1' type="button">Submit request</button>
-        <div id='success'></div>
-        <div id='fail'></div>
     </div>
 </html>

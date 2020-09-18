@@ -22,18 +22,31 @@ h1{
     text-decoration: darkgoldenrod 5px underline;
     margin-bottom: 3%;
 }
+tfoot {
+    display: table-header-group;
+}
+tfoot input {
+    width: 100%;
+    padding: 3px;
+    box-sizing: border-box;
+}
+#divleft input{
+    font-size: 105%;
+}
 #divright{
     width:50%;
     /* display: inline; */
     margin: 0 0 5% 0;
-    float: right;
     border: 1px solid black;
     padding: 6px;
+    float:right;
 }
 #divleft{
-    width:49%;
-    font-size: 18px;
+    width:40%;
+    font-size: 150%;
+    float: left;
 }
+
 #divleft div{
     margin:0 1% 4% 1%;
     
@@ -43,6 +56,7 @@ h1{
     max-width: 49%;
     background-color: rgb(235, 196, 203);
     padding: 1%;
+    font-size: 80%;
 }
 #success{
     color: green;

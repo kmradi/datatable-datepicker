@@ -1,5 +1,33 @@
 $(document).ready( function () {
-    $('#table1').DataTable();
+    $('#table1 tfoot th').each( function () {
+        var title = $(this).text();
+        $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
+    } );
+
+    var table = $('#table1').DataTable({
+        dom: 'Bfrtip',
+        buttons: [
+            'copy', 'excel', 'pdf', 'csv'
+        ],
+        initComplete: function () {
+            // Apply the search
+            this.api().columns().every( function () {
+                var that = this;
+    
+                $( 'input', this.footer() ).on( 'keyup change clear', function () {
+                    if ( that.search() !== this.value ) {
+                        that
+                            .search( this.value )
+                            .draw();
+                    }
+                } );
+            } );
+        }
+    });
+    
+ 
+    // DataTable
+    
     $(function() { 
         $( "#datepicker1" ).datepicker({
             changeYear:true,
@@ -39,10 +67,3 @@ $(document).ready( function () {
     }); 
     
 });
-
-// $(document).ready(function() { 
-          
-//     $(function() { 
-//         $( "#datepicker1" ).datepicker(); 
-//     }); 
-// }) 
