@@ -1,0 +1,52 @@
+
+table{
+    font-size:150%;
+    /* width:100%; */
+    text-align: center;
+}
+/* tr:nth-child(even){
+    background-color: rgb(193, 201, 236);
+}
+tr:nth-child(odd){
+    background-color: rgb(170, 238, 148); */
+}
+th{
+    background-color: rgb(143, 135, 250);
+}
+caption{
+    background-color: rgb(191, 187, 248);
+}
+h1{
+    text-align: center;
+    color: rgb(105, 54, 54);
+    text-decoration: darkgoldenrod 5px underline;
+    margin-bottom: 3%;
+}
+#divright{
+    width:50%;
+    /* display: inline; */
+    margin: 0 0 5% 0;
+    float: right;
+    border: 1px solid black;
+    padding: 6px;
+}
+#divleft{
+    width:49%;
+    font-size: 18px;
+}
+#divleft div{
+    margin:0 1% 4% 1%;
+    
+}
+#divinfo{
+    width: fit-content;
+    max-width: 49%;
+    background-color: rgb(235, 196, 203);
+    padding: 1%;
+}
+#success{
+    color: green;
+}
+#fail{
+    color: red;
+}
